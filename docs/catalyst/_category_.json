@@ -1,0 +1,10 @@
+{
+  "label": "Catalyst Handbook",
+  "position": 10,
+  "collapsed": false,
+  "collapsible": false,
+  "link": {
+    "type": "generated-index",
+    "description": "The catalyst handbook is divided in three parts. A section for analysts using\nthe system, one for engineers, that create content for Catalyst and a section\nfor administrators that maintain Catalyst.",
+  }
+}

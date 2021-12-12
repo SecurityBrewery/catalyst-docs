@@ -1,0 +1,9 @@
+{
+  "label": "Admin Handbook",
+  "position": 0,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "How to maintain the Catalyst."
+  }
+}

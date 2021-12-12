@@ -1,0 +1,8 @@
+{
+  "label": "CAQL",
+  "position": 19,
+  "link": {
+    "type": "generated-index",
+    "description": "The query language for the Catalyst."
+  }
+}
