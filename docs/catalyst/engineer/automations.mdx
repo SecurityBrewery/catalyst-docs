@@ -1,0 +1,192 @@
+---
+sidebar_position: 40
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Automations
+
+Automations are scripts that can be triggered in different parts of the
+catalyst.
+
+## Type
+
+There are global automations, artifact automations and task automations.
+
+_Global_ automations are only available for admin users and can be started
+from the job view.
+
+_Artifact_ automations are shown in the artifact popups in the tickets. They
+can be used trigger enrichments or other automations for the artifact.
+
+_Task_ automations are part of playbooks. They automate single steps of the
+playbook.
+
+Automations can be written in a way to be used in all available places, e.g. a
+VirusTotal automation can be used within a playbook, as an artifact enrichment
+and for direct requests globally (although the last option might not be that
+useful).
+
+## Docker Image
+
+The docker image defines the docker image that is used as an environment for
+the script.
+
+## Script
+
+The script file is copied to the docker container when the automation is
+triggered. It can be written in any language executable in the given docker
+image. The message (s. below) is passed as an input. The output from
+printed to stderr is saved as log lines, while the stdout should be a single
+json document that is taken as a result.
+
+## Message
+
+The message is passed as a json string to the script as a the first and only
+command line argument. The content of the message depends on the type of the
+automation.
+
+<Tabs>
+  <TabItem value="apple" label="Global Message" default>
+
+A global message contains the user input in the `payload`. The `context`
+element is empty. The `secrets` contains credentials to access the
+catalyst.
+
+
+```json
+{
+  "payload": {
+    "thehiveurl": "https://thehive.example.org",
+    "thehivekey": "yqV1tmLy+w4shJ",
+    "skip_files": true,
+    "keep_ids": true
+  },
+  "context": {},
+  "secrets": {
+    "catalyst_apikey": "d0169af94c70981eb5452a42fae536b6caa9be3a",
+    "catalyst_apiurl": "http://catalyst:8000/api"
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="orange" label="Artifact Message">
+
+An artifact message contains the artifact name as the `payload`. The `context`
+contains the full artifact. The `secrets` contains credentials to access the
+catalyst.
+
+```json
+{
+  "payload": "2.2.2.2",
+  "context": {
+    "artifact": {
+      "name": "2.2.2.2",
+      "status": "unknown",
+      "type": "ip"
+    }
+  },
+  "secrets": {
+    "catalyst_apikey": "d0169af94c70981eb5452a42fae536b6caa9be3a",
+    "catalyst_apiurl": "http://catalyst:8000/api"
+  }
+}
+```
+
+  </TabItem>
+  <TabItem value="banana" label="Task Message">
+
+A task message contains the mapped input in the `payload` as defined in the
+playbook. The `context` element is contains the task, playbook and ticket.
+The `secrets` contains credentials to access the catalyst.
+
+```json
+{
+  "payload": {
+    "default": "foobar"
+  },
+  "context": {
+    "playbook": {
+      "name": "Simple",
+      "tasks": {
+        "input": {
+          "active": false,
+          "closed": "2021-12-15T15:12:30.123583196Z",
+          "created": "2021-12-15T15:12:26.662322255Z",
+          "data": {
+            "something": "foobar"
+          },
+          "done": true,
+          "name": "Enter something to hash",
+          "next": {
+            "hash": "something != ''"
+          },
+          "order": 0,
+          "type": "input"
+        },
+        "hash": {
+          "active": true,
+          "automation": "hash.sha1",
+          "created": "2021-12-15T15:12:26.662323393Z",
+          "done": false,
+          "payload": {
+            "default": "playbook.tasks['input'].data['something']"
+          },
+          "name": "Hash the something",
+          "order": 1,
+          "type": "automation"
+        }
+      }
+    },
+    "task": {
+      "active": true,
+      "automation": "hash.sha1",
+      "created": "2021-12-15T15:12:26.662323393Z",
+      "done": false,
+      "payload": {
+        "default": "playbook.tasks['input'].data['something']"
+      },
+      "name": "Hash the something",
+      "order": 1,
+      "type": "automation"
+    },
+    "ticket": {
+      "created": "2021-09-14T19:59:41.148843599Z",
+      "id": 100503,
+      "modified": "2021-12-15T15:12:30.123Z",
+      "name": "phishing from raheemmcclure@hettinger.net detected",
+      "owner": "eve",
+      "playbooks": {
+        "simple": ...
+      },
+      "references": [
+        {
+          "href": "http://www.productstrategic.com/methodologies/synergize/exploit/initiatives",
+          "name": "count"
+        },
+        ...
+      ],
+      "schema": "{}",
+      "status": "closed",
+      "type": "alert"
+    }
+  },
+  "secrets": {
+    "catalyst_apikey": "d0169af94c70981eb5452a42fae536b6caa9be3a",
+    "catalyst_apiurl": "http://catalyst:8000/api"
+  }
+}
+```
+
+  </TabItem>
+</Tabs>
+
+
+## Schema
+
+The schema is only used in global automations. It is used to create input forms
+based on <a href="https://json-schema.org/">JSON schemas</a>. For advanced
+options like styling or more complex input
+see <a href="https://koumoul-dev.github.io/vuetify-jsonschema-form/latest/">VJSF</a>.

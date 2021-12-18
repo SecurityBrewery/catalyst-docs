@@ -17,13 +17,13 @@ This installation is insecure and should only be used for local testing.
 
 1. [Install Docker](https://docs.docker.com/engine/install/), 
    [Docker Compose](https://docs.docker.com/compose/install/)
-   and [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+   and [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
    (if not already installed). 
 2. Clone the setup repository `git clone https://github.com/SecurityBrewery/catalyst-setup`
-3. Run `docker-compose -f docker-compose.yml -f docker-compose-insecure.yml up`
-4. Wait a little (about 30s - 1m) for Keycloak. 
-5. Open [https://localhost](http://localhost)
-6. Login with bob:bob
+3. Run `docker-compose -f docker-compose.yml -f docker-compose-insecure.yml up`.
+4. Wait a little (about 30s - 1min) for Keycloak. 
+5. Open [https://localhost](http://localhost).
+6. Login with username bob and password bob.
 
 ## Full Installation
 
@@ -32,9 +32,10 @@ other systems running Docker as well.
 
 For this installation we assume the domain for catalyst is https://catalyst.example.org.
 
-1. [Install Docker](https://docs.docker.com/engine/install/).
-2. [Install Docker Compose](https://docs.docker.com/compose/install/).
-3. If not installed already, [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+1. [Install Docker](https://docs.docker.com/engine/install/),
+   [Docker Compose](https://docs.docker.com/compose/install/)
+   and [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+   (if not already installed).
 4. Clone the setup repository `git clone https://github.com/SecurityBrewery/catalyst-setup`.
 5. Replace `cert.pem` and `key.pem` with your own certificates
 6. Edit `docker-compose-ssl.yml`:
@@ -63,8 +64,8 @@ For this installation we assume the domain for catalyst is https://catalyst.exam
       5. Change the `S3_PASSWORD` to the value of `MINIO_ROOT_PASSWORD` set in the `minio` service.
       6. Change the `EMITTER_IO_KEY` to the key generated when creating the emitter license above.
       7. Change `INITIAL_API_KEY` to a random secret value.
-8. Run `docker-compose -f docker-compose.yml -f docker-compose-ssl.yml up`
-9. Open keycloak (e.g. https://catalyst.example.org:9002) in your browser
-   1. Create a user
-10. Open catalyst (e.g. https://catalyst.example.org) in your browser
-    1. Login with the created user
+8. Run `docker-compose -f docker-compose.yml -f docker-compose-ssl.yml up`.
+9. Open keycloak (e.g. https://catalyst.example.org:9002) in your browser.
+   1. Create a user.
+10. Open catalyst (e.g. https://catalyst.example.org) in your browser.
+    1. Login with the created user.

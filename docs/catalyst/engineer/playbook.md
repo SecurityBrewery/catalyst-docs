@@ -4,6 +4,8 @@ sidebar_position: 30
 
 # Playbooks
 
+![Screenshot of the template part of a ticket](/screenshots/playbooks.png)
+
 Playbooks define a list of tasks that should be completed to handle the ticket. Tasks in playbooks in Catalyst can be
 manual analyst tasks or automated tasks. The playbook is described in a yaml format. The single fields in this format
 are described in the following sections.

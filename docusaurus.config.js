@@ -27,9 +27,8 @@ const config = {
         },
         blog: false,
         // blog: {
-        //   showReadingTime: true,
-        //   editUrl:
-        //     'https://github.com/SecurityBrewery/catalyst-docs/edit/main/docs/blog/',
+        //   showReadingTime: false,
+        //   editUrl: 'https://github.com/SecurityBrewery/catalyst-docs/edit/main/',
         // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -61,9 +60,7 @@ const config = {
         },
         items: [
           {to: '/features', label: 'Features', position: 'left'},
-          // {to: '/service', label: 'Service', position: 'left'},
           // {to: '/blog', label: 'Blog', position: 'left'},
-          // {to: '/pricing', label: 'Pricing', position: 'left'},
           {
             type: 'dropdown',
             label: 'Documentation',
@@ -105,10 +102,6 @@ const config = {
                 label: 'Features',
                 to: '/features',
               },
-              // {
-              //   label: 'Pricing',
-              //   to: '/pricing',
-              // },
             ],
           },
           {
