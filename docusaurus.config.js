@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Catalyst',
   tagline: 'Speed up your reactions',
-  url: 'https://securitybrewery.github.io', // 'https://docs.catalyst-soar.com',
-  baseUrl: '/', // catalyst-docs/
+  url: 'https://catalyst-soar.com',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
