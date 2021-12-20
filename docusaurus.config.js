@@ -60,6 +60,7 @@ const config = {
         },
         items: [
           {to: '/features', label: 'Features', position: 'left'},
+          {to: '/support', label: 'Support', position: 'left'},
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'dropdown',
@@ -135,19 +136,19 @@ const config = {
               },
             ],
           },
-          // {
-          //   title: 'Support',
-          //   items: [
-          //     {
-          //       label: 'FAQ',
-          //       to: '/faq',
-          //     },
-          //     {
-          //       label: 'Community Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //   ],
-          // },
+          {
+            title: 'Support',
+            items: [
+              {
+                label: 'Professional Support',
+                to: '/support',
+              },
+              {
+                label: 'Imprint',
+                to: '/imprint',
+              },
+            ],
+          },
         ],
         copyright: `
             <!--a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item margin-right--md">
