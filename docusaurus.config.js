@@ -126,10 +126,10 @@ const config = {
                 label: 'Discord',
                 href: 'https://discord.gg/nrmpveWvZX',
               },
-              // {
-              //   label: 'Twitter',
-              //   href: 'https://twitter.com/docusaurus',
-              // },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/securitybrewery',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/SecurityBrewery/catalyst',
