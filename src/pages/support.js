@@ -63,7 +63,7 @@ export default function Hello() {
                                 </div>
                             </div>
                         </div>
-                        <p style={{marginTop: "10pt"}}>
+                        <p style={{marginTop: "10pt", textAlign: "center"}}>
                             We offer professional support at
                             <a href="mailto: info@security-brewery.com" style={{margin: "5px"}}>info@security-brewery.com</a>
                             or you can use
