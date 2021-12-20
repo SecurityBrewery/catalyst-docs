@@ -63,7 +63,7 @@ export default function Hello() {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.buttons} style={{marginTop: "10pt"}}>
+                        <p style={{marginTop: "10pt"}}>
                             We offer professional support at
                             <a href="mailto: info@security-brewery.com" style={{margin: "5px"}}>info@security-brewery.com</a>
                             or you can use
@@ -71,7 +71,7 @@ export default function Hello() {
                             or
                             <a href="https://discord.gg/nrmpveWvZX" style={{margin: "5px"}}>Discord</a>
                             to discuss a topic.
-                        </div>
+                        </p>
                     </div>
                 </section>
             </main>
