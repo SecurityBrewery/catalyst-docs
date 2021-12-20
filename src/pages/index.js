@@ -42,6 +42,20 @@ export default function Home() {
           <p className="teaser">
           </p>
         </div>
+        <section className={styles.features}>
+            <div className="container">
+              <div className="row">
+                <div className="col col--8 col--offset-2">
+                  <div className="text--center">
+                    <span style={{fontSize: "18pt"}}>
+                      Catalyst is a SOAR (Security Orchestration, Automation and Response) system that helps you to automate your alert handling and incident response processes.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
         <HomepageFeatures />
       </main>
     </Layout>

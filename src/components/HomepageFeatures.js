@@ -3,25 +3,7 @@ import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
-    {
-        title: 'Automate',
-        Svg: require('../../static/img/undraw_walking_outside.svg').default,
-        description: (
-            <>
-                Catalyst helps you to automate your alerts and incidents. Focus on the important tasks or relax a little.
-            </>
-        ),
-    },
-    {
-        title: 'Easy to Setup',
-        Svg: require('../../static/img/undraw_to_the_stars.svg').default,
-        description: (
-            <>
-                Catalyst can be set up in a couple of minutes and contains all you need to start your alert handling and
-                incident response.
-            </>
-        ),
-    },
+
     {
         title: 'Flexible',
         Svg: require('../../static/img/undraw_workflow.svg').default,
@@ -32,20 +14,35 @@ const FeatureList = [
             </>
         ),
     },
-
-    //{
-    //  title: 'Reliable',
-    //  Svg: require('../../static/img/undraw_server_status.svg').default,
-    //  description: (
-    //    <>
-    //      Handling incidents requires
-    //
-    //      Fixing issues has a higher priority as new features.
-    //
-    //      Catalyst handles hundreds of thousands of alerts and incidents
-    //    </>
-    //  ),
-    //},
+    // {
+    //     title: 'Easy to Setup',
+    //     Svg: require('../../static/img/undraw_to_the_stars.svg').default,
+    //     description: (
+    //         <>
+    //             Catalyst can be set up in a couple of minutes and contains all you need to start your alert handling and
+    //             incident response.
+    //         </>
+    //     ),
+    // },
+    {
+        title: 'Free and Unlimited',
+        Svg: require('../../static/img/undraw_walking_outside.svg').default,
+        description: (
+            <>
+                Catalyst is free to use within your company or organisation. There is no limit on
+                users, playbooks or any other functionality.
+            </>
+        ),
+    },
+    {
+        title: 'Automated',
+        Svg: require('../../static/img/undraw_reading_time.svg').default,
+        description: (
+            <>
+                Catalyst helps you to automate your alerts and incidents. Focus on the important tasks or relax a little.
+            </>
+        ),
+    },
 ];
 
 function Feature({Svg, title, description}) {
