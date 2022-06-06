@@ -25,11 +25,11 @@ const FeatureList = [
     //     ),
     // },
     {
-        title: 'Free and Unlimited',
+        title: 'Open Source and Unlimited',
         Svg: require('../../static/img/undraw_walking_outside.svg').default,
         description: (
             <>
-                Catalyst is free to use within your company or organisation. There is no limit on
+                Catalyst is open source. There is no limit on
                 users, playbooks or any other functionality.
             </>
         ),

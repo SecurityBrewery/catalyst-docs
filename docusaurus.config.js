@@ -60,7 +60,7 @@ const config = {
         },
         items: [
           {to: '/features', label: 'Features', position: 'left'},
-          {to: '/support', label: 'Support', position: 'left'},
+          // {to: '/support', label: 'Support', position: 'left'},
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'dropdown',
@@ -139,10 +139,10 @@ const config = {
           {
             title: 'Support',
             items: [
-              {
+              /* {
                 label: 'Professional Support',
                 to: '/support',
-              },
+              }, */
               {
                 label: 'Imprint',
                 to: '/imprint',
