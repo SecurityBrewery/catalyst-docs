@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Install
 
-<!-- If you just want to try Catalyst you can also use https://try.catalyst-soar.com. -->
+If you just want to try Catalyst you can also use https://try.catalyst-soar.com.
 
 ## Quick Local Test Installation
 

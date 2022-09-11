@@ -86,11 +86,11 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
-          // {
-          //   href: 'https://try.catalyst-soar.com',
-          //   label: 'Try online',
-          //   position: 'right',
-          // },
+          {
+            href: 'https://try.catalyst-soar.com',
+            label: 'Try online',
+            position: 'right',
+          },
         ],
       },
       footer: {

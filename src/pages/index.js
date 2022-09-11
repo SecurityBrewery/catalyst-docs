@@ -20,14 +20,14 @@ export default function Home() {
             {siteConfig.title}
           </h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-          {/* <div className={styles.buttons}>
+          <div className={styles.buttons}>
             <Link
                 className="button button--secondary button--lg"
                 to="https://try.catalyst-soar.com"
             >
               Try online
             </Link>
-          </div> */}
+          </div>
         </div>
       </header>
       <main>
