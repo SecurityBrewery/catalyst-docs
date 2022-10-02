@@ -1,0 +1,43 @@
+---
+sidebar_position: 20
+---
+
+# Config
+
+Complete list of configuration options for the Catalyst server:
+
+| Command line argument   /<br/> Environment Variable  | Type                                       | Description                                                                      |  
+|------------------------------------------------------|--------------------------------------------|----------------------------------------------------------------------------------|
+| `--secret`              /<br/> `SECRET`              | string *(required)*                        | A random secret value                                                            |
+| `--external-address`    /<br/> `EXTERNAL_ADDRESS`    | string *(required)*                        | The external address of the Catalyst server (e.g. https://try.catalyst-soar.com) |
+| `--catalyst-address`    /<br/> `CATALYST_ADDRESS`    | string *(default: "http://catalyst:8000")* | The internal address of the Catalyst server                                      |
+| `--network`             /<br/> `CATALYST_NETWORK`    | string *(default: "catalyst")*             | The network of the Catalyst server                                               |
+| `--port`                /<br/> `PORT`                | int *(default: "8000")*                    | The port of the Catalyst server                                                  |
+| `--initial-api-key`     /<br/> `INITIAL_API_KEY`     | string                                     | Setup an initial API key                                                         |
+| `--simple-auth-enable`  /<br/> `SIMPLE_AUTH_ENABLE`  | bool *(default: "true")*                   | Enable simple authentication                                                     |
+| `--api-key-auth-enable` /<br/> `API_KEY_AUTH_ENABLE` | bool *(default: "true")*                   | Enable API key authentication                                                    |
+| `--oidc-auth-enable`    /<br/> `OIDC_AUTH_ENABLE`    | bool *(default: "false")*                  | Enable OIDC authentication                                                       |
+| `--index-path`          /<br/> `INDEX_PATH`          | string *(default: "index.bleve")*          | Path for the bleve index                                                         |
+| `--arango-db-host`      /<br/> `ARANGO_DB_HOST`      | string *(default: "http://arangodb:8529")* | The host of the ArangoDB server                                                  |
+| `--arango-db-user`      /<br/> `ARANGO_DB_USER`      | string *(default: "root")*                 | The user of the ArangoDB server                                                  |
+| `--arango-db-password`  /<br/> `ARANGO_DB_PASSWORD`  | string *(required)*                        | The password of the ArangoDB server                                              |
+| `--s3-host`             /<br/> `S3_HOST`             | string *(default: "http://minio:9000")*    | The host of the S3 server                                                        |
+| `--s3-user`             /<br/> `S3_USER`             | string *(default: "minio")*                | The user of the S3 server                                                        |
+| `--s3-password`         /<br/> `S3_PASSWORD`         | string                                     | The password of the S3 server                                                    |
+
+## OIDC Config
+
+If OIDCAuthEnable is set to true, the following configurations can be used:
+
+| Command line argument   /<br/> Environment Variable  | Type                                     | Description                                                                                 |
+|------------------------------------------------------|------------------------------------------|---------------------------------------------------------------------------------------------|
+| `--oidc-issuer`         /<br/> `OIDC_ISSUER`         | string *(required)*                      | The url of the OIDC provider (e.g. https://try.catalyst-soar.com:9002/auth/realms/catalyst) |
+| `--oidc-client-id`      /<br/> `OIDC_CLIENT_ID`      | string *(default: "catalyst")*           | The client ID for OIDC (e.g. fe500b3c-a0e3-4891-9521-4f2ab382a10c)                          |
+| `--oidc-client-secret`  /<br/> `OIDC_CLIENT_SECRET`  | string *(required)*                      | The client secret for OIDC                                                                  |
+| `--oidc-scopes`         /<br/> `OIDC_SCOPES`         | []string                                 | Additional scopes to request, ['oidc', 'profile', 'email'] are always added.                |
+| `--oidc-claim-username` /<br/> `OIDC_CLAIM_USERNAME` | string *(default: "preferred_username")* | Username field in the OIDC claim                                                            |
+| `--oidc-claim-email`    /<br/> `OIDC_CLAIM_EMAIL`    | string *(default: "email")*              | Email field in the OIDC claim                                                               |
+| `--oidc-claim-name`     /<br/> `OIDC_CLAIM_NAME`     | string *(default: "name")*               | Name field in the OIDC claim                                                                |
+| `--auth-block-new`      /<br/> `AUTH_BLOCK_NEW`      | bool *(default: "true")*                 | Block newly created users                                                                   |
+| `--auth-default-roles`  /<br/> `AUTH_DEFAULT_ROLES`  | []string *(default: all analyst roles)*  | Default roles for new users (`analyst:dashboard:read,analyst:automation:read,…`)            |
+| `--auth-admin-users`    /<br/> `AUTH_ADMIN_USERS`    | []string                                 | Usernames to grant admin rights                                                             |
