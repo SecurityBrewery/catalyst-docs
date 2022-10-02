@@ -6,7 +6,7 @@ sidebar_position: 40
 
 Catalyst contains an API endpoint to create backups which make backups quite easy. To create regular backups you can
 create a new API key with the
-`admin:backup:read` permission. Then set up a cronjob somewhere with the following curl command:
+`backup:read` permission. Then set up a cronjob somewhere with the following curl command:
 
 ```bash
 curl \

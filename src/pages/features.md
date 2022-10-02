@@ -63,11 +63,18 @@ scripting languages and run securely in their own environment.
 
 <hr style={{clear: 'both'}}/>
 
-## Users
+## Dashboards
 
 <center>
-  <img style={{float: 'left', marginRight: '10px', marginBottom: '20px'}} alt="Screenshot of the playbook part of a ticket" src="/screenshots/roles.png" />
+  <img style={{float: 'right', marginLeft: '10px', marginBottom: '20px'}} alt="Screenshot of the dashboard editor" src="/screenshots/dashboard.png" />
 </center>
+
+Catalyst comes with a dashboard editor that allows you to create custom dashboards
+for your organisation. Dashboards can be created with line, bar, and pie charts.
+
+<hr style={{clear: 'both'}}/>
+
+## Users
 
 Catalyst has two different types of users, normal users accessing the platform
 via OIDC authentication and API keys for external script. A
