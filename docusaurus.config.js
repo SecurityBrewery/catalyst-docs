@@ -143,10 +143,10 @@ const config = {
                 label: 'Professional Support',
                 to: '/support',
               }, */
-              {
-                label: 'Imprint',
-                to: '/imprint',
-              },
+              // {
+              //   label: 'Imprint',
+              //   to: '/imprint',
+              // },
             ],
           },
         ],
