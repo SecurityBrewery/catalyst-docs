@@ -10,7 +10,7 @@ const config = {
   tagline: 'Speed up your reactions',
   url: 'https://catalyst-soar.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'SecurityBrewery', // Usually your GitHub org/user name.
