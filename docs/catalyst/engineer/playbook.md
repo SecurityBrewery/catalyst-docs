@@ -18,7 +18,7 @@ Name of the playbook.
 
 ### tasks
 
-Playbooks consists of tasks,
+Playbooks consist of tasks,
 
 ### tasks.&lt;task_id&gt;.name
 
@@ -26,11 +26,11 @@ Name for the single task.
 
 ### tasks.&lt;task_id&gt;.type
 
-Type of the task, can be one of `task`, `question` or `automation`.
+Type of the task, can be one of `task`, `input` or `automation`.
 <dl>
 <dt>task</dt>
 <dd>Simple manual task for the analyst.</dd>
-<dt>question</dt>
+<dt>input</dt>
 <dd>Question for the analyst. Requires `schema` to be set.</dd>
 <dt>action</dt>
 <dd>Automation trigger, requires `action` to be set.</dd>
@@ -38,7 +38,7 @@ Type of the task, can be one of `task`, `question` or `automation`.
 
 ### tasks.&lt;task_id&gt;.schema
 
-This field is only used when `type` is `question`.
+This field is only used when `type` is `input`.
 <a href="https://json-schema.org/">JSON schema</a> that defines the expected answer from the analyst. This is used to
 generate an input form which the analyst can fill. For advanced options like styling or more complex input
 see <a href="https://koumoul-dev.github.io/vuetify-jsonschema-form/latest/">VJSF</a>.
@@ -48,7 +48,7 @@ see <a href="https://koumoul-dev.github.io/vuetify-jsonschema-form/latest/">VJSF
 This field is only used when `type` is `automation`. This is a simple string that is used as a key for
 automations.
 
-### tasks.&lt;task_id&gt;.msg
+### tasks.&lt;task_id&gt;.payload
 
 This field is only used when `type` is `automation`. It can be used to map values from other sources to
 the appropriate input of the automation.
@@ -61,8 +61,8 @@ hash:
   name: Hash the malware
   type: action
   automation: hash.sha1
-  msg:
-    payload: "playbook.tasks['input'].data['malware']"
+  payload:
+    default: "playbook.tasks['input'].data['something']"
 ...
 ```
 
