@@ -7,35 +7,32 @@ on:
     branches: [main]
 
 jobs:
-  checks:
-    if: github.event_name != 'push'
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/configure-pages@v2
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Test Build
-        run: |
+      - run: |
           yarn install --frozen-lockfile
           yarn build
-  gh-release:
-    if: github.event_name != 'pull_request'
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: build
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - uses: webfactory/ssh-agent@v0.5.4
-        with:
-          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
-      - name: Release to GitHub Pages
-        env:
-          USE_SSH: true
-          GIT_USER: git
-        run: |
-          git config --global user.email "git@cugu.eu"
-          git config --global user.name "Jonas Plum"
-          yarn install --frozen-lockfile
-          yarn deploy
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
