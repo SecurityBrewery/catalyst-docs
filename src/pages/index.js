@@ -23,7 +23,7 @@ export default function Home() {
           <div className={styles.buttons}>
             <Link
                 className="button button--secondary button--lg"
-                to="https://try.catalyst-soar.com"
+                to="/demo"
             >
               Try online
             </Link>

@@ -41,7 +41,7 @@ const config = {
         specs: [
           {
             spec: 'community.json',
-            routePath: '/api/',
+            route: '/api/',
           },
         ],
       },
@@ -87,7 +87,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://try.catalyst-soar.com',
+            to: '/demo',
             label: 'Try online',
             position: 'right',
           },
@@ -103,6 +103,10 @@ const config = {
                 label: 'Features',
                 to: '/features',
               },
+              {
+                label: 'Demo',
+                to: '/demo',
+              }
             ],
           },
           {
@@ -136,19 +140,20 @@ const config = {
               },
             ],
           },
-          {
+          /*{
             title: 'Support',
             items: [
-              /* {
+              {
                 label: 'Professional Support',
                 to: '/support',
-              }, */
+              },
               // {
               //   label: 'Imprint',
               //   to: '/imprint',
               // },
             ],
           },
+          */
         ],
         copyright: `
             <!--a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item margin-right--md">
