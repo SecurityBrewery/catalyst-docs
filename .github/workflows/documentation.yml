@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-        run: |
+      - run: |
           yarn install --frozen-lockfile
           yarn build
       - uses: actions/upload-pages-artifact@v1
