@@ -11,7 +11,7 @@ create a new API key with the
 ```bash
 curl \
   --header "PRIVATE-TOKEN: UPwC3RUdfaIritWqfGwrsiEWl8Qh_VXy" \
-  --output backup-$(date -u +"%Y-%m-%dT%H:%M:%SZ").zip \
+  --output backup-$(date -u +"%Y-%m-%dT%H-%M-%SZ").zip \
   https://try.catalyst-soar.com/api/backup/create
 ```
 
@@ -28,6 +28,6 @@ Restore takes a backup created with the backup endpoint and restores it to the C
 ```bash
 curl \
   --header "PRIVATE-TOKEN: UPwC3RUdfaIritWqfGwrsiEWl8Qh_VXy" \
-  --data "backup=@backup-2021-12-12T13:58:32Z.zip" \
+  -F "backup=@/home/bob/backup-2021-12-12T13:58:32Z.zip" \
   https://try.catalyst-soar.com/api/backup/restore
 ```
