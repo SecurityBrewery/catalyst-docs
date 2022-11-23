@@ -32,8 +32,8 @@ Type of the task, can be one of `task`, `input` or `automation`.
 <dd>Simple manual task for the analyst.</dd>
 <dt>input</dt>
 <dd>Question for the analyst. Requires `schema` to be set.</dd>
-<dt>action</dt>
-<dd>Automation trigger, requires `action` to be set.</dd>
+<dt>automation</dt>
+<dd>Automation trigger, requires `automation` to be set.</dd>
 </dl>
 
 ### tasks.&lt;task_id&gt;.schema
@@ -59,7 +59,7 @@ the appropriate input of the automation.
 ...
 hash:
   name: Hash the malware
-  type: action
+  type: automation
   automation: hash.sha1
   payload:
     default: "playbook.tasks['input'].data['something']"
