@@ -24,7 +24,7 @@ The script will create the users:
    `unzip`, `curl`, `openssl`, and `sed` are installed.
 2. Download the installation script:
    ```bash
-   curl -sL https://raw.githubusercontent.com/SecurityBrewery/catalyst-setup/v0.10.0/install_catalyst.sh -o install_catalyst.sh
+   curl -sL https://raw.githubusercontent.com/SecurityBrewery/catalyst-setup/v0.10.1/install_catalyst.sh -o install_catalyst.sh
    ```
 3. Run the installation script:
    ```bash
