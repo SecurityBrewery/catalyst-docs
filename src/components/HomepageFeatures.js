@@ -14,23 +14,12 @@ const FeatureList = [
             </>
         ),
     },
-    // {
-    //     title: 'Easy to Setup',
-    //     Svg: require('../../static/img/undraw_to_the_stars.svg').default,
-    //     description: (
-    //         <>
-    //             Catalyst can be set up in a couple of minutes and contains all you need to start your alert handling and
-    //             incident response.
-    //         </>
-    //     ),
-    // },
     {
-        title: 'Open Source and Unlimited',
+        title: 'Open Source',
         Svg: require('../../static/img/undraw_walking_outside.svg').default,
         description: (
             <>
-                Catalyst is open source. There is no limit on
-                users, playbooks or any other functionality.
+                Catalyst is open source. You can use it for free and contribute to the project.
             </>
         ),
     },
