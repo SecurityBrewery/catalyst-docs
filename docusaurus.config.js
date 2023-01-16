@@ -24,12 +24,9 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/SecurityBrewery/catalyst-docs/edit/main/',
+          showLastUpdateTime: true,
         },
         blog: false,
-        // blog: {
-        //   showReadingTime: false,
-        //   editUrl: 'https://github.com/SecurityBrewery/catalyst-docs/edit/main/',
-        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -60,8 +57,6 @@ const config = {
         },
         items: [
           {to: '/features', label: 'Features', position: 'left'},
-          // {to: '/support', label: 'Support', position: 'left'},
-          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'dropdown',
             label: 'Documentation',
@@ -69,8 +64,6 @@ const config = {
             items: [
               {
                 to: '/docs/category/catalyst-handbook',
-                // type: 'category',
-                // docId: 'catalyst-handbook',
                 label: 'Catalyst Handbook'
               },
               {
@@ -79,7 +72,6 @@ const config = {
               },
             ]
           },
-          // {to: '/faq', label: 'FAQ', position: 'left'},
 
           {
             href: 'https://github.com/SecurityBrewery/catalyst',
@@ -112,10 +104,6 @@ const config = {
           {
             title: 'Resources',
             items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
               {
                 to: '/docs/category/catalyst-handbook',
                 label: 'Catalyst Handbook'
@@ -140,20 +128,6 @@ const config = {
               },
             ],
           },
-          /*{
-            title: 'Support',
-            items: [
-              {
-                label: 'Professional Support',
-                to: '/support',
-              },
-              // {
-              //   label: 'Imprint',
-              //   to: '/imprint',
-              // },
-            ],
-          },
-          */
         ],
         copyright: `
             <!--a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item margin-right--md">
