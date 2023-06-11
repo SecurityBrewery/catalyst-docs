@@ -74,6 +74,40 @@ It is tested on Ubuntu 22.04 but should work on other Linux distributions and ma
    7. Wait for the installation to finish. Catalyst will be available at `<hostname>`.
    8. Log in with the credentials from above.
 
+### Local Installation
+
+:::caution
+
+Please acknowledge that this is for testing ONLY and NOT recommended for ANYTHING ELSE!
+If you just want to try Catalyst you can also use the [demo](/demo).
+
+:::
+
+To run a test deployment of Catalyst on your local machine execute the following steps:
+
+1. Add the following lines to your `/etc/hosts`:
+   * `127.0.0.1     catalyst.localhost`
+   * `127.0.0.1     authelia.localhost`
+2. Ensure [Docker](https://docs.docker.com/engine/install/),
+   [Docker Compose](https://docs.docker.com/compose/install/),
+   `unzip`, `curl`, `openssl`, and `sed` are installed.
+3. Download the installation script:
+   `curl -sL https://raw.githubusercontent.com/SecurityBrewery/catalyst-setup/v0.10.3/install_catalyst.sh -o install_catalyst.sh`.
+4. Generate a self-signed certificate: `openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes -keyout example.key -out example.crt -subj "/CN=localhost"`.
+5. Run the command, e.g.,:
+   ```sh
+   bash install_catalyst.sh \
+   https://catalyst.localhost \
+   https://authelia.localhost \
+   /some/path/example.crt /some/path/example.key \
+   admin:admin:admin@example.com
+   ```
+6. Wait for the installation to finish. Catalyst will be available at `catalyst.localhost`.
+7. Log in with the `admin` credentials from above.
+8. Due to the self-signed certificates, you have to ignore the corresponding warning in your browser. You might face a 
+   failed login after you ignored the certificate warning when being redirected to `authelia.localhost.` In this case, 
+   navigate to `catalyst.localhost` and login again.
+
 ## User Management
 
 Users are managed by [Authelia](https://www.authelia.com/).
