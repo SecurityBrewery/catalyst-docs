@@ -77,12 +77,7 @@ const config = {
             href: 'https://github.com/SecurityBrewery/catalyst',
             label: 'GitHub',
             position: 'right',
-          },
-          {
-            to: '/demo',
-            label: 'Try online',
-            position: 'right',
-          },
+          }
         ],
       },
       footer: {
@@ -94,10 +89,6 @@ const config = {
               {
                 label: 'Features',
                 to: '/features',
-              },
-              {
-                label: 'Demo',
-                to: '/demo',
               }
             ],
           },
