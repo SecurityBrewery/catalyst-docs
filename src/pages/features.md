@@ -2,116 +2,61 @@
 title: Features
 ---
 
-## Ticket (Alert & Incident) Management
+### Ticket (Alert & Incident) Management
 
-![Screenshot of a ticket](/screenshots/ticket.png)
-
-Tickets are the core of Catalyst. They represent alerts, incidents, forensics
-investigations, threat hunts or any other event you want to handle in your
-organisation.
-
----
-
-## Ticket Templates
+Tickets are the core of Catalyst.
+They represent alerts, incidents, forensics investigations,
+threat hunts or any other event you want to handle in your organisation.
 
 <center>
-  <img width="400" style={{float: 'right', marginLeft: '10px', marginBottom: '20px'}} alt="Screenshot of the playbook part of a ticket" src="/screenshots/details.png" />
+    <a href="/screenshots/ticket.png">
+      <img alt="Screenshot of a ticket" src="/screenshots/ticket.png" />
+    </a>
 </center>
 
-Templates define the custom information for tickets. The core information for
-tickets like title, creation date or closing status is kept quite minimal and other
-information like criticality, description or MITRE ATT&CK information can be
-added individually.
+### Ticket Types
 
-<hr style={{clear: 'both'}}/>
+Templates define the custom information for tickets.
+The core information for tickets like title, creation date or closing status is kept quite minimal
+and other information like criticality, description or MITRE ATT&CK information can be added individually.
 
-## Conditional Custom Fields
+### Timelines
+
+Timelines are used to document the progress of an investigation.
+They can be used to document the steps taken during an investigation, the findings or the results of the investigation.
+
+### Tasks
+
+Tasks are the smallest unit of work in Catalyst. They can be assigned to users and have a status.
+Tasks can be used to document the progress of an investigation or to assign work to different users.
 
 <center>
-  <img width="400" style={{marginRight: '10px', marginBottom: '20px'}} alt="Screenshot of the playbook part of a ticket" src="/screenshots/conditional_custom_field_a.png" />
-  <img width="400" alt="Screenshot of the playbook part of a ticket" src="/screenshots/conditional_custom_field_b.png" />
+    <a href="/screenshots/tasks.png">
+      <img alt="Screenshot of the tasks part of a ticket" src="/screenshots/tasks.png" />
+    </a>
 </center>
 
-Custom Fields can be dependent on each other. So if you, for example choose 
-"malware" as an incident type a custom field ask you to define it further as
-ransomware, worm, etc. which a "phishing" incident would ask for the number
-of received mails in that campaign.
+### Custom Fields
 
-<hr style={{clear: 'both'}}/>
+Custom fields can be added to tickets to store additional information.
+They can be used to store information like the affected system, the attacker's IP address or the type of malware.
+Custom fields can be added to ticket types and are then available for all tickets of this type.
 
-## Playbooks
+### Dashboards
+
+Catalyst comes with a dashboard that presents the most important information at a glance.
 
 <center>
-  <img style={{float: 'left', marginRight: '10px', marginBottom: '20px'}} alt="Screenshot of the playbook part of a ticket" src="/screenshots/phishing_playbook.png" />
+    <a href="/screenshots/dashboard.png">
+        <img alt="Screenshot of the dashboard" src="/screenshots/dashboard.png" />
+    </a>
 </center>
 
-Playbooks represent processes that can be attached to tickets. Playbooks can 
-contain manual and automated tasks. Complex workflows with different workflow
-branches, parallel tasks and task dependencies can be modeled.
+### Webhooks
 
-<hr style={{clear: 'both'}}/>
+Catalyst can send webhooks to other systems.
+This can be used to trigger actions in other systems and create automated workflows.
 
-## Automations
+### More
 
-<center>
-  <img style={{marginRight: '10px', marginBottom: '20px'}} alt="Screenshot of the playbook part of a ticket" src="/screenshots/script.png" />
-</center>
-
-Automations are scripts that automate tasks or enrich artifacts. Automations are
-run in their own Docker containers. This enables them to be created in different
-scripting languages and run securely in their own environment. 
-
-<hr style={{clear: 'both'}}/>
-
-## Dashboards
-
-<center>
-  <img style={{float: 'right', marginLeft: '10px', marginBottom: '20px'}} alt="Screenshot of the dashboard editor" src="/screenshots/dashboard.png" />
-</center>
-
-Catalyst comes with a dashboard editor that allows you to create custom dashboards
-for your organisation. Dashboards can be created with line, bar, and pie charts.
-
-<hr style={{clear: 'both'}}/>
-
-## Users
-
-Catalyst has two different types of users, normal users accessing the platform
-via OIDC authentication and API keys for external script. A
-fine-grained access model is available for both types and allows to define 
-possible actions for each user.
-
-<!--
-
-<span class="chip">Enterprise only</span>
-
-## Group Management
-
-Catalyst Enterprise allows you to define groups that can be used for the ticket 
-access permissions.
-
-<span class="chip">Enterprise only</span>
-
-## Ticket Level Permissions
-
-Ticket can be restricted to be viewable or editable by certain users or groups 
-only. This enables you the share more delicate incidents only with a limited 
-part of the overall users.
-
-<span class="chip">Enterprise only</span>
-
-## Alert Ingestion Filter
-
-Alert Ingestion Filters run on every created event and allow automated actions
-like setting the severity for new incidents automatically or auto-closing noisy 
-alerts.
-
-<span class="chip">Enterprise only</span>
-
-## Ticket Graph
-
-The Ticket Graph is an explorative view on tickets and artifacts to visualize
-relations and clusters of those.
-
-
--->
+Catalyst supports a lot more features like: Links, Files, or Comments on tickets.

@@ -1,14 +1,15 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes} = require('prism-react-renderer');
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Catalyst',
   tagline: 'Speed up your reactions',
-  url: 'https://catalyst-soar.com',
+  url: 'https://catalyst.security-brewery.com/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -32,17 +33,6 @@ const config = {
         },
       }),
     ],
-    [
-      'redocusaurus',
-      {
-        specs: [
-          {
-            spec: 'community.json',
-            route: '/api/',
-          },
-        ],
-      },
-    ]
   ],
 
   themeConfig:
@@ -66,13 +56,19 @@ const config = {
                 to: '/docs/category/catalyst-handbook',
                 label: 'Catalyst Handbook'
               },
-              {
-                to: '/api',
-                label: 'API',
-              },
             ]
           },
 
+          {
+            href: 'https://try.catalyst.security-brewery.com/',
+            label: 'Demo',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/SecurityBrewery/catalyst/discussions',
+            label: 'Discussions',
+            position: 'right',
+          },
           {
             href: 'https://github.com/SecurityBrewery/catalyst',
             label: 'GitHub',
@@ -99,12 +95,16 @@ const config = {
                 to: '/docs/category/catalyst-handbook',
                 label: 'Catalyst Handbook'
               },
-              {to: '/api', label: 'API', position: 'left'},
             ],
           },
           {
             title: 'Community',
             items: [
+              {
+                href: 'https://github.com/SecurityBrewery/catalyst/discussions',
+                label: 'Discussions',
+                position: 'right',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/SecurityBrewery/catalyst',
@@ -144,8 +144,8 @@ const config = {
             Copyright © ${new Date().getFullYear()} Security Brewery-->`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: lightTheme,
+        darkTheme: darkTheme,
       },
     }),
 };

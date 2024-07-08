@@ -15,37 +15,33 @@ organisation.
 To change ticket type, title, status and owner just click on the respective 
 element in the ui.
 
-## Details
+## Timeline
 
-The details inputs are generated according to the selected 
-[template](../engineer/template).
+Timeline entries can be used to document the steps taken during an investigation, 
+and the findings or the results of the investigation.
+Timeline entries can manually be added by the analyst.
+A timeline entry can contain [Markdown syntax](https://www.markdownguide.org/basic-syntax/).
+
+## Tasks
+
+Tasks are integral components of the ticket management process in Catalyst. 
+They represent actionable items that need to be completed to resolve a ticket. 
+Each task is associated with a specific ticket and can be assigned to different team members, 
+making it easier to track the progress of investigations and incident resolutions.
 
 ## Comments
 
-Comments can be added by the analyst. They can contain 
+Comments can be added by the analyst. They can contain
 [Markdown syntax](https://www.markdownguide.org/basic-syntax/)
 to add more structured information.
 
-## Playbooks
+## Details
 
-A ticket can contain multiple playbooks. Those playbooks show a short overview
-of the playbook and all done and open tasks.
+The details inputs are generated according to the selected ticket type.
 
-## References
+## Links
 
 References are simple links other systems or websites.
-
-## Artifacts
-
-Artifacts can be used for any kind of observed data like IPs, hostnames, mail 
-addresses. Opening an artifact allows the analyst to trigger enrichments or 
-other automations for the artifact. Artifacts also are used to correlate 
-tickets.
-
-## Related Tickets
-
-Related tickets can be defined explicitly or implicitly by containing the same
-artifacts.
 
 ## Files
 

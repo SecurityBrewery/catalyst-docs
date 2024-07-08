@@ -33,7 +33,7 @@ export default function Home() {
                 <div className="col col--8 col--offset-2">
                   <div className="text--center">
                     <span style={{fontSize: "18pt"}}>
-                      Catalyst is a SOAR (Security Orchestration, Automation and Response) system that helps you to automate your alert handling and incident response processes.
+                       Catalyst is an open source incident response platform and ticket system that helps to automate alert handling and incident response processes
                     </span>
                   </div>
                 </div>

@@ -9,8 +9,8 @@ const FeatureList = [
         Svg: require('../../static/img/undraw_workflow.svg').default,
         description: (
             <>
-                Catalyst adapts to your processes and workflows. Ticket types, conditional
-                custom fields, statuses and playbooks help to fit to your needs.
+                Catalyst adapts to your processes and workflows.
+                Ticket types, and custom fields help to fit to your needs.
             </>
         ),
     },
@@ -19,7 +19,7 @@ const FeatureList = [
         Svg: require('../../static/img/undraw_walking_outside.svg').default,
         description: (
             <>
-                Catalyst is open source. You can use it for free and contribute to the project.
+                Catalyst is open source. You can use it for free and adapt the project if you want to.
             </>
         ),
     },
@@ -28,7 +28,8 @@ const FeatureList = [
         Svg: require('../../static/img/undraw_reading_time.svg').default,
         description: (
             <>
-                Catalyst helps you to automate your alerts and incidents. Focus on the important tasks or relax a little.
+                Catalyst helps you to automate your alerts and incidents.
+                Focus on the important tasks or relax a little.
             </>
         ),
     },
