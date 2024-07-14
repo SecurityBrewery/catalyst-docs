@@ -1,11 +1,18 @@
 ---
 sidebar_position: 50
+sidebar_class_name: hidden
 ---
 
 # Webhooks
 
 Catalyst can send webhooks to other systems.
 This can be used to trigger actions in other systems and create automated workflows.
+
+:::warning
+
+Admin webhooks are deprecated. 
+Use [reactions](../engineer/reactions) instead.
+:::
 
 ## Configuration
 
