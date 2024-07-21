@@ -1,9 +1,9 @@
 {
-  "label": "Analyst Handbook",
+  "label": "Action",
   "position": 40,
   "collapsed": false,
   "link": {
     "type": "generated-index",
-    "description": "How to use the Catalyst."
+    "description": "Actions can be used to automate Catalyst"
   }
 }

@@ -1,32 +1,20 @@
 ---
-sidebar_position: 50
-sidebar_class_name: hidden
+sidebar_position: 10
 ---
 
-# Webhooks
+# Collection Hook
 
-Catalyst can send webhooks to other systems.
-This can be used to trigger actions in other systems and create automated workflows.
+A collection hook is a trigger that is executed when a record in a collection is created, updated, or deleted.
+Collections are `Tickets`, `Tasks`, `Comments`, `Timeline`, `Links`, and `Files`.
+You can add multiple collections and events to a collection hook.
 
-:::warning
+[![Reactions](/screenshots/reaction_trigger_hook.png)](/screenshots/reaction_trigger_hook.png)
 
-Admin webhooks are deprecated. 
-Use [reactions](../engineer/reactions) instead.
-:::
+## Event Format
 
-## Configuration
+Collection hooks pass a json event to the action.
 
-Webhooks can be configured in the [admin interface](login.md), in the `webhooks` collection.
-The webhook record in the following example sends `create`, `update`, and `delete` events for `tickets`
-to `http://localhost:8080/webhook`.
-
-[![Webhook configuration](/screenshots/webhooks.png)](/screenshots/webhooks.png)
-
-## Example events
-
-## `create` event by a user
-
-The following example shows a `create` event for a ticket by a non-admin user:
+The following is an example of a `create` event for a ticket by a non-admin user:
 
 ```json
 {
@@ -57,9 +45,7 @@ The following example shows a `create` event for a ticket by a non-admin user:
 }
 ```
 
-## `update` event by an admin
-
-Example of a `update` event, created by an admin user:
+The following is an example of an `update` event for a ticket by an admin user:
 
 ```json
 {
@@ -79,8 +65,7 @@ Example of a `update` event, created by an admin user:
     "id": "k72zfucb9kqmjyx",
     "created": "2024-07-06 23:48:03.137Z",
     "updated": "2024-07-06 23:48:03.137Z",
-    "avatar": 0,
-    "email": "admin@example.com"
+    "username": "admin"
   }
 }
 ```
