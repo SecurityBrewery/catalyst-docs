@@ -8,7 +8,7 @@ Catalyst is a self-hosted application.
 You can install it on your own server or use a cloud provider.
 
 The latest release can be found on the [GitHub releases page](https://github.com/SecurityBrewery/catalyst/releases).
-The release contains a binary for Linux, and macOS.
+The releases contain binaries for Linux and macOS.
 
 Once you have downloaded the binary, and unpacked it, you can start Catalyst with `cataylst serve`.
 
@@ -16,6 +16,11 @@ The console shows the server's admin UI URL, e.g. http://127.0.0.1:8090/_/.
 Open it and create an admin account.
 
 In the admin UI create users which can then log in to the user interface at http://127.0.0.1:8090/.
+
+## Configuration
+
+At `Settings -> Application` you can configure the `Application URL` and set it to the URL where Catalyst is reachable.
+This is important for Python actions to work correctly.
 
 ## Going to production
 
