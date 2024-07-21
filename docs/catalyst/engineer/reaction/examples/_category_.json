@@ -1,0 +1,9 @@
+{
+  "label": "Examples",
+  "position": 60,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Examples of how to use Catalyst reactions."
+  }
+}

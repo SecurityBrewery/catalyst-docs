@@ -1,0 +1,9 @@
+{
+  "label": "Trigger",
+  "position": 20,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Trigger can reaction to events in Catalyst and start actions"
+  }
+}
