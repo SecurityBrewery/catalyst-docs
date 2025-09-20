@@ -36,7 +36,7 @@ print("id", ticket["record"]["id"])
 
 The Python action provides a temporary `CATALYST_TOKEN` environment variable that can be used to authenticate with the
 Catalyst API.
-I can be used in combination with the [PocketBase Python SDK](https://github.com/vaphes/pocketbase)
+It can be used in combination with the [PocketBase Python SDK](https://github.com/vaphes/pocketbase)
 to interact with the Catalyst API
 
 ```python
