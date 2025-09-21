@@ -14,8 +14,6 @@ The Python code is executed in the same environment as the Catalyst server,
 so be careful with the code you write and who has access to it.
 :::
 
-[![Reactions](/screenshots/reaction_action_python.png)](/screenshots/reaction_action_python.png)
-
 ## Event Data
 
 The Python action receives the event data from the trigger in the first argument.
@@ -36,18 +34,16 @@ print("id", ticket["record"]["id"])
 
 The Python action provides a temporary `CATALYST_TOKEN` environment variable that can be used to authenticate with the
 Catalyst API.
-It can be used in combination with the [PocketBase Python SDK](https://github.com/vaphes/pocketbase)
-to interact with the Catalyst API
+It can be used to interact with the Catalyst API
 
 ```python
 import os
 
-from pocketbase import PocketBase
+import requests
 
-# Connect to the PocketBase server
-client = PocketBase('http://127.0.0.1:8090')
-client.auth_store.save(token=os.environ["CATALYST_TOKEN"])
+url = os.environ["CATALYST_APP_URL"]
+header = {"Authorization": "Bearer " + os.environ["CATALYST_TOKEN"]}
 
 # Get users
-users = client.collection("users").get_list(1, 200)
+users = requests.get(url + "/api/users", headers=header).json()
 ```

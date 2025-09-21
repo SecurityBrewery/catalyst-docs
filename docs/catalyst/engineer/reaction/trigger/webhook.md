@@ -19,8 +19,6 @@ e.g. `Authorization: Bearer my_secret_token`.
 
 The reaction editor will show an example URL that you can use to trigger the reaction.
 
-[![Reactions](/screenshots/reaction_trigger_webhook.png)](/screenshots/reaction_trigger_webhook.png)
-
 ## Event Data
 
 The HTTP/Webhook trigger passes a JSON event to the action.

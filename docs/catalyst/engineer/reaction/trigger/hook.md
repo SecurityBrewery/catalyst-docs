@@ -8,7 +8,7 @@ A collection hook is a trigger that is executed when a record in a collection is
 Collections are `Tickets`, `Tasks`, `Comments`, `Timeline`, `Links`, and `Files`.
 You can add multiple collections and events to a collection hook.
 
-[![Reactions](/screenshots/reaction_trigger_hook.png)](/screenshots/reaction_trigger_hook.png)
+[![Reactions](/screenshots/reactions.png)](/screenshots/reactions.png)
 
 ## Event Format
 

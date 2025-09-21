@@ -16,21 +16,20 @@ import json
 import random
 import os
 
-from pocketbase import PocketBase
+import requests
 
 # Parse the ticket from the input
 ticket = json.loads(sys.argv[1])
 
-# Connect to the PocketBase server
-client = PocketBase('http://127.0.0.1:8090')
-client.auth_store.save(token=os.environ["CATALYST_TOKEN"])
+url = os.environ["CATALYST_APP_URL"]
+header = {"Authorization": "Bearer " + os.environ["CATALYST_TOKEN"]}
 
 # Get a random user
-users = client.collection("users").get_list(1, 200)
-random_user = random.choice(users.items)
+users = requests.get(url + "/api/users", headers=header).json()
+random_user = random.choice(users)
 
 # Assign the ticket to the random user
-client.collection("tickets").update(ticket["record"]["id"], {
-	"owner": random_user.id,
+requests.patch(url + "/api/tickets/" + ticket["record"]["id"], headers=header, json={
+    "owner": random_user["id"]
 })
 ```
