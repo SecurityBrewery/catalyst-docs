@@ -14,37 +14,6 @@ You can add multiple collections and events to a collection hook.
 
 Collection hooks pass a json event to the action.
 
-The following is an example of a `create` event for a ticket by a non-admin user:
-
-```json
-{
-  "action": "create",
-  "collection": "tickets",
-  "record": {
-    "collectionId": "tickets",
-    "collectionName": "tickets",
-    "created": "2024-07-07 01:31:02.110Z",
-    "description": "",
-    "id": "a0152zdnfzgow4z",
-    "name": "test",
-    "open": true,
-    "updated": "2024-07-07 01:31:02.110Z"
-  },
-  "auth": {
-    "avatar": "",
-    "collectionId": "_pb_users_auth_",
-    "collectionName": "users",
-    "created": "2024-07-07 01:29:57.912Z",
-    "emailVisibility": false,
-    "id": "u_test",
-    "name": "Alivia Cartwright",
-    "updated": "2024-07-07 01:29:57.912Z",
-    "username": "u_test",
-    "verified": true
-  }
-}
-```
-
 The following is an example of an `update` event for a ticket by an admin user:
 
 ```json
@@ -52,20 +21,25 @@ The following is an example of an `update` event for a ticket by an admin user:
   "action": "update",
   "collection": "tickets",
   "record": {
-    "collectionId": "tickets",
-    "collectionName": "tickets",
-    "created": "2024-07-07 00:15:57.007Z",
-    "description": "",
-    "id": "tp0tppxc18slt9a",
-    "name": "my ticket",
-    "open": true,
-    "updated": "2024-07-07 00:15:57.007Z"
+    "created": "2025-09-05T04:17:34.389899296Z",
+    "description": "Potential insider threat flagged by behavior analysis tool.",
+    "id": "alertHwdsKzYfp0F0",
+    "name": "Security Patch Required",
+    "open": false,
+    "owner": "upQHtTlWbRa56",
+    "schema": {},
+    "state": {},
+    "type": "alert",
+    "updated": "2025-09-10T20:12:58.749166039Z"
   },
-  "admin": {
-    "id": "k72zfucb9kqmjyx",
-    "created": "2024-07-06 23:48:03.137Z",
-    "updated": "2024-07-06 23:48:03.137Z",
-    "username": "admin"
+  "auth": {
+    "id": "u94727b0f300e46",
+    "username": "admin",
+    "active": true,
+    "name": "admin@catalyst-soar.com",
+    "email": "admin@catalyst-soar.com",
+    "created": "2025-09-21T17:16:07Z",
+    "updated": "2025-09-21T17:16:07Z"
   }
 }
 ```
