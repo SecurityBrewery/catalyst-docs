@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Ingest Alerts
 
-This example demonstrates how to ingest alerts from a webhook into a PocketBase collection.
+This example demonstrates how to ingest alerts from a webhook.
 
 The trigger for this example is a [webhook trigger](../trigger/webhook.md) that receives alerts from an external system. 
 The webhook trigger passes a JSON event to the [Python action](../action/python.md) that contains the alert data.
