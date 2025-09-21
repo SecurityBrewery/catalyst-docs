@@ -8,21 +8,18 @@ Catalyst is a self-hosted application.
 You can install it on your own server or use a cloud provider.
 
 The latest release can be found on the [GitHub releases page](https://github.com/SecurityBrewery/catalyst/releases).
-The releases contain binaries for Linux and macOS.
+The releases contain binaries for Linux, macOS, and Windows.
 
-Once you have downloaded the binary, and unpacked it, you can start Catalyst with `cataylst serve`.
+Once you have downloaded the binary, and unpacked it, 
+you can create an admin user with `./catalyst admin create admin@example.com mysecretpassword`.
 
-The console shows the server's admin UI URL, e.g. http://127.0.0.1:8090/_/.
-Open it and create an admin account.
+Run the server with `./catalyst serve`.
 
-In the admin UI create users which can then log in to the user interface at http://127.0.0.1:8090/.
+For Windows you can use `catalyst.exe` instead of `./catalyst`.
 
 ## Configuration
 
-At `Settings -> Application` you can configure the `Application URL` and set it to the URL where Catalyst is reachable.
-This is important for Python actions to work correctly.
+In the `Settings` you can configure the `App URL` and the `SMTP` settings for email notifications and Python actions to
+work correctly.
 
-## Going to production
-
-As Catalyst is based on PocketBase you can follow their
-[Going to production](https://pocketbase.io/docs/going-to-production/) guide.
+![Settings](/screenshots/settings.png)

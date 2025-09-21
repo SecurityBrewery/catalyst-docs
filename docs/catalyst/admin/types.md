@@ -4,7 +4,7 @@ sidebar_position: 45
 
 # Ticket Types
 
-Ticket types can be configured in the [admin interface](login.md), in the `types` collection.
+Ticket types can be configured in when you are logged in as an admin or a user with the `type:write` permission.
 
 There are two default ticket types: `Alert` and `Incident`, but you can add more types to fit your organization's needs.
 

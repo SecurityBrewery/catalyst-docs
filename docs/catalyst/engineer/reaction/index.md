@@ -24,4 +24,4 @@ The trigger listens for events and the action is executed when the trigger is ac
 ## Examples
 
 - [Assign new tickets to random users](./examples/assign_ticket): Assign new tickets to random users.
-- [Ingest alerts](./examples/ingest_alerts): Ingest alerts from a webhook into a PocketBase collection.
+- [Ingest alerts](./examples/ingest_alerts): Ingest alerts from a webhook.
